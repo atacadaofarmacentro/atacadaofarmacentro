@@ -19,37 +19,49 @@
     }
 
     header {
-      background: #ff0000;
-      padding: 20px;
+      background: linear-gradient(135deg, #ff6b6b, #ff2d55);
+      padding: 30px 20px;
       text-align: center;
-      border: 3px solid #fff;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
       position: sticky;
       top: 0;
       z-index: 1000;
     }
 
-    header img.logo {
-      max-width: 450px;
-      height: auto;
-      border-radius: 5px;
+    header h1 {
+      font-size: 2.8em;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: 1px;
+      display: inline-flex;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 10px 20px;
+      border-radius: 10px;
+      backdrop-filter: blur(5px);
+    }
+
+    header h1::before {
+      content: "💊";
+      margin-right: 10px;
+      font-size: 1.2em;
     }
 
     nav {
       background-color: #fff;
-      padding: 10px 0;
+      padding: 15px 0;
       text-align: center;
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
       position: sticky;
-      top: 140px;
+      top: 110px;
       z-index: 1000;
     }
 
     nav a {
       margin: 0 15px;
       text-decoration: none;
-      color: #ff0000;
-      font-weight: 700;
+      color: #ff2d55;
+      font-weight: 600;
       font-size: 1.1em;
       padding: 8px 15px;
       border-radius: 25px;
@@ -57,7 +69,7 @@
     }
 
     nav a:hover {
-      background-color: #ff0000;
+      background-color: #ff2d55;
       color: #fff;
     }
 
@@ -73,9 +85,9 @@
     }
 
     .section h2 {
-      color: #ff0000;
-      font-size: 2.2em;
-      font-weight: 700;
+      color: #ff2d55;
+      font-size: 2em;
+      font-weight: 600;
       margin-bottom: 30px;
       text-align: center;
       position: relative;
@@ -85,7 +97,7 @@
       content: "";
       width: 60px;
       height: 4px;
-      background: #ff0000;
+      background: #ff2d55;
       position: absolute;
       bottom: -10px;
       left: 50%;
@@ -129,31 +141,31 @@
     }
 
     .product-card strong {
-      color: #ff0000;
-      font-size: 1.3em;
-      font-weight: 700;
+      color: #ff2d55;
+      font-size: 1.2em;
+      font-weight: 600;
     }
 
     .add-to-cart {
-      background-color: #ff0000;
+      background-color: #ff2d55;
       color: #fff;
       border: none;
       padding: 8px 15px;
       border-radius: 20px;
       cursor: pointer;
-      font-weight: 600;
+      font-weight: 500;
       transition: background-color 0.3s ease;
     }
 
     .add-to-cart:hover {
-      background-color: #cc0000;
+      background-color: #ff6b6b;
     }
 
     #cart-icon {
       position: fixed;
       bottom: 20px;
       right: 20px;
-      background-color: #ff0000;
+      background-color: #ff2d55;
       color: #fff;
       width: 60px;
       height: 60px;
@@ -169,7 +181,7 @@
     }
 
     #cart-icon:hover {
-      background-color: #cc0000;
+      background-color: #ff6b6b;
       transform: scale(1.1);
     }
 
@@ -178,7 +190,7 @@
       top: -5px;
       right: -5px;
       background-color: #fff;
-      color: #ff0000;
+      color: #ff2d55;
       border-radius: 50%;
       width: 20px;
       height: 20px;
@@ -200,7 +212,7 @@
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
       max-width: 300px;
       width: 100%;
-      max-height: 60vh;
+      max-height: 400px;
       overflow-y: auto;
       transition: opacity 0.3s ease;
       opacity: 0;
@@ -247,19 +259,19 @@
     }
 
     #checkout-btn {
-      background-color: #ff0000;
+      background-color: #ff2d55;
       color: #fff;
       border: none;
       padding: 10px;
       border-radius: 20px;
       width: 100%;
       cursor: pointer;
-      font-weight: 600;
+      font-weight: 500;
       transition: background-color 0.3s ease;
     }
 
     #checkout-btn:hover {
-      background-color: #cc0000;
+      background-color: #ff6b6b;
     }
 
     #contato p {
@@ -270,9 +282,9 @@
     }
 
     #contato p a {
-      color: #ff0000;
+      color: #ff2d55;
       text-decoration: none;
-      font-weight: 700;
+      font-weight: 500;
     }
 
     #contato p a:hover {
@@ -280,7 +292,7 @@
     }
 
     footer {
-      background: #ff0000;
+      background: linear-gradient(135deg, #ff2d55, #ff6b6b);
       color: #fff;
       text-align: center;
       padding: 20px;
@@ -289,8 +301,8 @@
     }
 
     @media (max-width: 768px) {
-      header img.logo {
-        max-width: 300px;
+      header h1 {
+        font-size: 2em;
       }
 
       nav a {
@@ -334,7 +346,7 @@
 </head>
 <body>
   <header>
-    <img src="imagens/atacadao_farma_centro_logo.png" alt="Atacadão Farma Centro Logo" class="logo">
+    <h1>Atacadão Farma Centro</h1>
   </header>
 
   <nav>
@@ -379,6 +391,24 @@
             <p><strong>R$ 9,99</strong></p>
             <button class="add-to-cart" onclick="addToCart('Sabonete Granado Enxofre', 9.99)">Adicionar ao Carrinho</button>
         </div>
+        <div class="product-card">
+            <img src="imagens/sabonete_intimo.jpg" alt="Sabonete Íntimo">
+            <p>Sabonete Íntimo</p>
+            <p><strong>R$ 9,99</strong></p>
+            <button class="add-to-cart" onclick="addToCart('Sabonete Íntimo', 9.99)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="product-card">
+            <img src="imagens/toalha_guri_baby_soft.jpg" alt="Toalha Umedecida Guri Baby Soft">
+            <p>Toalha Umedecida Guri Baby Soft</p>
+            <p><strong>R$ 9,99</strong></p>
+            <button class="add-to-cart" onclick="addToCart('Toalha Umedecida Guri Baby Soft', 9.99)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="product-card">
+            <img src="imagens/creme_hidrante_natura.jpg" alt="Creme Hidratante Natura">
+            <p>Creme Hidratante Natura</p>
+            <p><strong>R$ 19,90</strong></p>
+            <button class="add-to-cart" onclick="addToCart('Creme Hidratante Natura', 19.90)">Adicionar ao Carrinho</button>
+        </div>
     </div>
   </div>
 
@@ -403,6 +433,36 @@
         <p><strong>R$ 19,90</strong></p>
         <button class="add-to-cart" onclick="addToCart('Antisséptico Bucal Listerine', 19.90)">Adicionar ao Carrinho</button>
       </div>
+      <div class="product-card">
+        <img src="imagens/omeprazol_20mg.jpg" alt="Omeprazol 20mg">
+        <p>Omeprazol 20mg</p>
+        <p><strong>R$ 15,50</strong></p>
+        <button class="add-to-cart" onclick="addToCart('Omeprazol 20mg', 15.50)">Adicionar ao Carrinho</button>
+      </div>
+      <div class="product-card">
+        <img src="imagens/dipirona_sodica_500mg_20comprimidos.jpg" alt="Dipirona Sódica 500mg com 20 comprimidos">
+        <p>Dipirona Sódica 500mg com 20 comprimidos</p>
+        <p><strong>R$ 8,90</strong></p>
+        <button class="add-to-cart" onclick="addToCart('Dipirona Sódica 500mg com 20 comprimidos', 8.90)">Adicionar ao Carrinho</button>
+      </div>
+      <div class="product-card">
+        <img src="imagens/benegrip_multi_dia_noite.jpg" alt="Benegrip Multi Dia e Noite 12 cápsulas">
+        <p>Benegrip Multi Dia e Noite 12 cápsulas</p>
+        <p><strong>R$ 24,90</strong></p>
+        <button class="add-to-cart" onclick="addToCart('Benegrip Multi Dia e Noite 12 cápsulas', 24.90)">Adicionar ao Carrinho</button>
+      </div>
+      <div class="product-card">
+        <img src="imagens/antialergico_cetirizina.jpg" alt="Antialérgico Cetirizina 10mg">
+        <p>Antialérgico Cetirizina 10mg</p>
+        <p><strong>R$ 12,50</strong></p>
+        <button class="add-to-cart" onclick="addToCart('Antialérgico Cetirizina 10mg', 12.50)">Adicionar ao Carrinho</button>
+      </div>
+      <div class="product-card">
+        <img src="imagens/soro_fisiologico_10ml.jpg" alt="Soro Fisiológico 10ml">
+        <p>Soro Fisiológico 10ml</p>
+        <p><strong>R$ 2,00</strong></p>
+        <button class="add-to-cart" onclick="addToCart('Soro Fisiológico 10ml', 2.00)">Adicionar ao Carrinho</button>
+      </div>
     </div>
   </div>
 
@@ -421,6 +481,42 @@
         <p><strong>R$ 3,50</strong></p>
         <button class="add-to-cart" onclick="addToCart('Creme Dental Colgate', 3.50)">Adicionar ao Carrinho</button>
       </div>
+      <div class="product-card">
+        <img src="imagens/fio_dental_oralb.jpg" alt="Fio Dental Oral-B">
+        <p>Fio Dental Oral-B</p>
+        <p><strong>R$ 8,90</strong></p>
+        <button class="add-to-cart" onclick="addToCart('Fio Dental Oral-B', 8.90)">Adicionar ao Carrinho</button>
+      </div>
+      <div class="product-card">
+        <img src="imagens/desodorante_rexona.jpg" alt="Desodorante Rexona">
+        <p>Desodorante Rexona</p>
+        <p><strong>R$ 10,90</strong></p>
+        <button class="add-to-cart" onclick="addToCart('Desodorante Rexona', 10.90)">Adicionar ao Carrinho</button>
+      </div>
+      <div class="product-card">
+        <img src="imagens/lenco_umedecido_neve_dermacare.jpg" alt="Lenço Umedecido Neve Dermacare com 48 unidades">
+        <p>Lenço Umedecido Neve Dermacare com 48 unidades</p>
+        <p><strong>R$ 12,90</strong></p>
+        <button class="add-to-cart" onclick="addToCart('Lenço Umedecido Neve Dermacare com 48 unidades', 12.90)">Adicionar ao Carrinho</button>
+      </div>
+      <div class="product-card">
+        <img src="imagens/escova_dental_oralb_indicator_plus.jpg" alt="Escova Dental Oral-B Indicator Plus">
+        <p>Escova Dental Oral-B Indicator Plus</p>
+        <p><strong>R$ 7,90</strong></p>
+        <button class="add-to-cart" onclick="addToCart('Escova Dental Oral-B Indicator Plus', 7.90)">Adicionar ao Carrinho</button>
+      </div>
+      <div class="product-card">
+        <img src="imagens/gel_antisseptico_hands.jpg" alt="Gel Antisséptico Hands 50ml">
+        <p>Gel Antisséptico Hands 50ml</p>
+        <p><strong>R$ 5,90</strong></p>
+        <button class="add-to-cart" onclick="addToCart('Gel Antisséptico Hands 50ml', 5.90)">Adicionar ao Carrinho</button>
+      </div>
+      <div class="product-card">
+        <img src="imagens/cotonete_curaprox.jpg" alt="Cotonete Curaprox 100un">
+        <p>Cotonete Curaprox 100un</p>
+        <p><strong>R$ 4,50</strong></p>
+        <button class="add-to-cart" onclick="addToCart('Cotonete Curaprox 100un', 4.50)">Adicionar ao Carrinho</button>
+      </div>
     </div>
   </div>
 
@@ -437,7 +533,7 @@
         <img src="imagens/shampoo_johnsons_baby.jpg" alt="Shampoo Johnson's Baby">
         <p>Shampoo Johnson's Baby</p>
         <p><strong>R$ 11,90</strong></p>
-        <button class="add-to-cart" onclick="addToCart('Shampoo Johnson\'s Baby', 11.90)">Adicionar ao Carrinho</button>
+        <button class="add-to-cart" onclick="addToCart('Shampoo Johnson's Baby', 11.90)">Adicionar ao Carrinho</button>
       </div>
       <div class="product-card">
         <img src="imagens/creme_bepantol.jpg" alt="Creme para Assaduras Bepantol">
@@ -467,7 +563,7 @@
         <img src="imagens/talco_johnsons_floral.jpg" alt="Talco Johnson's Floral 200g">
         <p>Talco Johnson's Floral 200g</p>
         <p><strong>R$ 10,90</strong></p>
-        <button class="add-to-cart" onclick="addToCart('Talco Johnson\'s Floral 200g', 10.90)">Adicionar ao Carrinho</button>
+        <button class="add-to-cart" onclick="addToCart('Talco Johnson's Floral 200g', 10.90)">Adicionar ao Carrinho</button>
       </div>
       <div class="product-card">
         <img src="imagens/chupeta_nuk_silicone.jpg" alt="Chupeta Nuk Silicone">
@@ -482,7 +578,7 @@
     <h2>Vitaminas</h2>
     <div class="products-grid">
       <div class="product-card">
-        <img src="imagens/imunopro.jpg" alt="Imunopro">
+        <img src="imagens/imunopro.jpg" alt="imunopro">
         <p>Imunopro</p>
         <p><strong>R$ 34,99</strong></p>
         <button class="add-to-cart" onclick="addToCart('Imunopro', 34.99)">Adicionar ao Carrinho</button>
@@ -492,6 +588,42 @@
         <p>Vitamina C 500mg</p>
         <p><strong>R$ 9,90</strong></p>
         <button class="add-to-cart" onclick="addToCart('Vitamina C 500mg', 9.90)">Adicionar ao Carrinho</button>
+      </div>
+      <div class="product-card">
+        <img src="imagens/vitamina_d_2000ui.jpg" alt="Vitamina D 2000UI">
+        <p>Vitamina D 2000UI</p>
+        <p><strong>R$ 22,90</strong></p>
+        <button class="add-to-cart" onclick="addToCart('Vitamina D 2000UI', 22.90)">Adicionar ao Carrinho</button>
+      </div>
+      <div class="product-card">
+        <img src="imagens/omega_3.jpg" alt="Ômega 3">
+        <p>Ômega 3</p>
+        <p><strong>R$ 34,90</strong></p>
+        <button class="add-to-cart" onclick="addToCart('Ômega 3', 34.90)">Adicionar ao Carrinho</button>
+      </div>
+      <div class="product-card">
+        <img src="imagens/lipo_axiz.jpg" alt="lipo_axiz">
+        <p>Lipo AXIZ</p>
+        <p><strong>R$ 99,99</strong></p>
+        <button class="add-to-cart" onclick="addToCart('lipo_axiz', 99.99)">Adicionar ao Carrinho</button>
+      </div>
+      <div class="product-card">
+        <img src="imagens/centrum_mulher_30comprimidos.jpg" alt="Centrum Mulher com 30 comprimidos">
+        <p>Centrum Mulher com 30 comprimidos</p>
+        <p><strong>R$ 32,90</strong></p>
+        <button class="add-to-cart" onclick="addToCart('Centrum Mulher com 30 comprimidos', 32.90)">Adicionar ao Carrinho</button>
+      </div>
+      <div class="product-card">
+        <img src="imagens/magnesio_300mg.jpg" alt="Magnésio 300mg">
+        <p>Magnésio 300mg</p>
+        <p><strong>R$ 15,90</strong></p>
+        <button class="add-to-cart" onclick="addToCart('Magnésio 300mg', 15.90)">Adicionar ao Carrinho</button>
+      </div>
+      <div class="product-card">
+        <img src="imagens/zinco_15mg.jpg" alt="Zinco 15mg">
+        <p>Zinco 15mg</p>
+        <p><strong>R$ 12,90</strong></p>
+        <button class="add-to-cart" onclick="addToCart('Zinco 15mg', 12.90)">Adicionar ao Carrinho</button>
       </div>
     </div>
   </div>
@@ -588,6 +720,7 @@
       document.getElementById('cart-modal').classList.remove('active');
     }
 
+    // Novo evento para fechar o modal ao clicar fora
     document.addEventListener('click', function(event) {
       const modal = document.getElementById('cart-modal');
       const cartIcon = document.getElementById('cart-icon');
@@ -596,16 +729,8 @@
       }
     });
 
+    // Ativa o carrinho ao clicar no ícone
     document.getElementById('cart-icon').addEventListener('click', toggleCart);
-
-    // Adiciona eventos para todos os botões "Adicionar ao Carrinho"
-    document.querySelectorAll('.add-to-cart').forEach(button => {
-      button.addEventListener('click', function() {
-        const productName = this.parentElement.querySelector('p:nth-child(2)').textContent;
-        const price = parseFloat(this.parentElement.querySelector('strong').textContent.replace('R$ ', ''));
-        addToCart(productName, price);
-      });
-    });
   </script>
 </body>
 </html>
