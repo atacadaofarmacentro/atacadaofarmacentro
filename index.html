@@ -177,11 +177,12 @@
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
       cursor: pointer;
       z-index: 1000;
-      position: relative;
+      transition: transform 0.3s ease;
     }
 
     #cart-icon:hover {
       background-color: #ff6b6b;
+      transform: scale(1.1);
     }
 
     #cart-count {
@@ -213,10 +214,13 @@
       width: 100%;
       max-height: 400px;
       overflow-y: auto;
+      transition: opacity 0.3s ease;
+      opacity: 0;
     }
 
     #cart-modal.active {
       display: block;
+      opacity: 1;
     }
 
     #cart-items {
@@ -335,6 +339,7 @@
       #cart-modal {
         bottom: 70px;
         right: 10px;
+        max-width: 250px;
       }
     }
   </style>
@@ -353,7 +358,7 @@
     <a onclick="showSection('contato')">Contato</a>
   </nav>
 
- <div id="perfumaria" class="section">
+  <div id="perfumaria" class="section">
     <h2>Perfumaria</h2>
     <div class="products-grid">
         <div class="product-card">
@@ -381,23 +386,23 @@
             <button class="add-to-cart" onclick="addToCart('Desodorante Herbissimo Menta', 6.99)">Adicionar ao Carrinho</button>
         </div>
         <div class="product-card">
-    <img src="imagens/sabonete_granado_enxofre.jpg" alt="Sabonete Granado Enxofre">
-    <p>Sabonete Granado Enxofre</p>
-    <p><strong>R$ 9,99</strong></p>
-    <button class="add-to-cart" onclick="addToCart('Sabonete Granado Enxofre', 9.99)">Adicionar ao Carrinho</button>
-</div>
-        <<div class="product-card">
-    <img src="imagens/sabonete_intimo.jpg" alt="Sabonete Íntimo">
-    <p>Sabonete Íntimo</p>
-    <p><strong>R$ 9,99</strong></p>
-    <button class="add-to-cart" onclick="addToCart('Sabonete Íntimo', 9.99)">Adicionar ao Carrinho</button>
-</div>
-       <div class="product-card">
-    <img src="imagens/toalha_guri_baby_soft.jpg" alt="Toalha Umedecida Guri Baby Soft">
-    <p>Toalha Umedecida Guri Baby Soft</p>
-    <p><strong>R$ 9,99</strong></p>
-    <button class="add-to-cart" onclick="addToCart('Toalha Umedecida Guri Baby Soft', 9.99)">Adicionar ao Carrinho</button>
-</div>
+            <img src="imagens/sabonete_granado_enxofre.jpg" alt="Sabonete Granado Enxofre">
+            <p>Sabonete Granado Enxofre</p>
+            <p><strong>R$ 9,99</strong></p>
+            <button class="add-to-cart" onclick="addToCart('Sabonete Granado Enxofre', 9.99)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="product-card">
+            <img src="imagens/sabonete_intimo.jpg" alt="Sabonete Íntimo">
+            <p>Sabonete Íntimo</p>
+            <p><strong>R$ 9,99</strong></p>
+            <button class="add-to-cart" onclick="addToCart('Sabonete Íntimo', 9.99)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="product-card">
+            <img src="imagens/toalha_guri_baby_soft.jpg" alt="Toalha Umedecida Guri Baby Soft">
+            <p>Toalha Umedecida Guri Baby Soft</p>
+            <p><strong>R$ 9,99</strong></p>
+            <button class="add-to-cart" onclick="addToCart('Toalha Umedecida Guri Baby Soft', 9.99)">Adicionar ao Carrinho</button>
+        </div>
         <div class="product-card">
             <img src="imagens/creme_hidrante_natura.jpg" alt="Creme Hidratante Natura">
             <p>Creme Hidratante Natura</p>
@@ -405,7 +410,7 @@
             <button class="add-to-cart" onclick="addToCart('Creme Hidratante Natura', 19.90)">Adicionar ao Carrinho</button>
         </div>
     </div>
-</div>
+  </div>
 
   <div id="medicamentos" class="section">
     <h2>Medicamentos Isentos de Prescrição</h2>
@@ -569,7 +574,7 @@
     </div>
   </div>
 
- <div id="vitaminas" class="section">
+  <div id="vitaminas" class="section">
     <h2>Vitaminas</h2>
     <div class="products-grid">
       <div class="product-card">
@@ -596,7 +601,7 @@
         <p><strong>R$ 34,90</strong></p>
         <button class="add-to-cart" onclick="addToCart('Ômega 3', 34.90)">Adicionar ao Carrinho</button>
       </div>
-     <div class="product-card">
+      <div class="product-card">
         <img src="imagens/lipo_axiz.jpg" alt="lipo_axiz">
         <p>Lipo AXIZ</p>
         <p><strong>R$ 99,99</strong></p>
