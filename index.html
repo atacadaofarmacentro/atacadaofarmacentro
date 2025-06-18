@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -27,57 +28,79 @@
     }
 
     header {
-      background: linear-gradient(135deg, #ff6b6b, #ff2d55);
-      padding: 30px 20px;
+      background: #fff;
+      padding: 20px 20px;
       text-align: center;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
       position: sticky;
       top: 0;
       z-index: 1000;
     }
 
-    header h1 {
-      font-size: 2.8em;
-      font-weight: 700;
-      color: #fff;
-      letter-spacing: 1px;
-      display: inline-flex;
+    .header-container {
+      max-width: 1300px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
       align-items: center;
-      background: rgba(255, 255, 255, 0.1);
-      padding: 10px 20px;
-      border-radius: 10px;
-      backdrop-filter: blur(5px);
     }
 
-    header h1::before {
-      content: "💊";
+    .logo {
+      background: #fff;
+      padding: 15px 25px;
+      border-radius: 25px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .logo .pill-icon {
+      font-size: 1.5em;
       margin-right: 10px;
-      font-size: 1.2em;
+      color: #ff0000;
+    }
+
+    .logo h1 {
+      font-size: 2em;
+      font-weight: 700;
+      color: #ff0000;
+      letter-spacing: 1px;
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .logo p {
+      font-size: 0.8em;
+      color: #ff0000;
+      margin: 0;
+      font-style: italic;
+      font-family: 'Poppins', sans-serif;
     }
 
     nav {
       background-color: #fff;
-      padding: 15px 0;
+      padding: 10px 0;
       text-align: center;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
       position: sticky;
-      top: 110px;
+      top: 90px;
       z-index: 1000;
     }
 
     nav a {
       margin: 0 15px;
       text-decoration: none;
-      color: #ff2d55;
+      color: #ff0000;
       font-weight: 600;
       font-size: 1.1em;
       padding: 8px 15px;
-      border-radius: 25px;
-      transition: background-color 0.3s ease, color 0.3s ease;
+      border-radius: 20px;
+      transition: color 0.3s ease, background-color 0.3s ease;
+      font-family: 'Poppins', sans-serif;
     }
 
     nav a:hover {
-      background-color: #ff2d55;
+      background-color: #ff0000;
       color: #fff;
     }
 
@@ -93,7 +116,7 @@
     }
 
     .section h2 {
-      color: #ff2d55;
+      color: #ff0000;
       font-size: 2em;
       font-weight: 600;
       margin-bottom: 30px;
@@ -105,7 +128,7 @@
       content: "";
       width: 60px;
       height: 4px;
-      background: #ff2d55;
+      background: #ff0000;
       position: absolute;
       bottom: -10px;
       left: 50%;
@@ -149,13 +172,13 @@
     }
 
     .product-card strong {
-      color: #ff2d55;
+      color: #ff0000;
       font-size: 1.2em;
       font-weight: 600;
     }
 
     .add-to-cart {
-      background-color: #ff2d55;
+      background-color: #ff0000;
       color: #fff;
       border: none;
       padding: 8px 15px;
@@ -166,14 +189,14 @@
     }
 
     .add-to-cart:hover {
-      background-color: #ff6b6b;
+      background-color: #cc0000;
     }
 
     #cart-icon {
       position: fixed;
       bottom: 20px;
       right: 20px;
-      background-color: #ff2d55;
+      background-color: #ff0000;
       color: #fff;
       width: 60px;
       height: 60px;
@@ -189,7 +212,7 @@
     }
 
     #cart-icon:hover {
-      background-color: #ff6b6b;
+      background-color: #cc0000;
       transform: scale(1.1);
     }
 
@@ -198,7 +221,7 @@
       top: -5px;
       right: -5px;
       background-color: #fff;
-      color: #ff2d55;
+      color: #ff0000;
       border-radius: 50%;
       width: 20px;
       height: 20px;
@@ -267,7 +290,7 @@
     }
 
     #checkout-btn {
-      background-color: #ff2d55;
+      background-color: #ff0000;
       color: #fff;
       border: none;
       padding: 10px;
@@ -279,7 +302,7 @@
     }
 
     #checkout-btn:hover {
-      background-color: #ff6b6b;
+      background-color: #cc0000;
     }
 
     #contato p {
@@ -290,7 +313,7 @@
     }
 
     #contato p a {
-      color: #ff2d55;
+      color: #ff0000;
       text-decoration: none;
       font-weight: 500;
     }
@@ -300,7 +323,7 @@
     }
 
     footer {
-      background: linear-gradient(135deg, #ff2d55, #ff6b6b);
+      background: #ff0000;
       color: #fff;
       text-align: center;
       padding: 20px;
@@ -309,6 +332,20 @@
     }
 
     @media (max-width: 768px) {
+      .logo h1 {
+        font-size: 1.5em;
+      }
+
+      .logo p {
+        font-size: 0.7em;
+      }
+
+      nav a {
+        margin: 0 10px;
+        font-size: 1em;
+        padding: 6px 12px;
+      }
+
       header h1 {
         font-size: 2em;
       }
@@ -354,16 +391,22 @@
 </head>
 <body>
   <header>
-    <h1>Atacadão Farma Centro</h1>
+    <div class="header-container">
+      <div class="logo">
+        <span class="pill-icon">💊</span>
+        <h1>Atacadão Farma Centro</h1>
+        <p>Sua saúde em primeiro lugar!</p>
+      </div>
+    </div>
   </header>
 
   <nav>
-    <a onclick="showSection('perfumaria')">Perfumaria</a>
-    <a onclick="showSection('medicamentos')">Medicamentos</a>
-    <a onclick="showSection('higiene')">Higiene Pessoal</a>
-    <a onclick="showSection('infantil')">Linha Infantil</a>
-    <a onclick="showSection('vitaminas')">Vitaminas</a>
-    <a onclick="showSection('contato')">Contato</a>
+    <a href="#" onclick="showSection('perfumaria')">Perfumaria</a>
+    <a href="#" onclick="showSection('medicamentos')">Medicamentos</a>
+    <a href="#" onclick="showSection('higiene')">Higiene Pessoal</a>
+    <a href="#" onclick="showSection('infantil')">Linha Infantil</a>
+    <a href="#" onclick="showSection('vitaminas')">Vitaminas</a>
+    <a href="#" onclick="showSection('contato')">Contato</a>
   </nav>
 
   <div id="perfumaria" class="section">
@@ -635,7 +678,7 @@
     <h2>Contato</h2>
     <p>📱 WhatsApp: <a href="https://wa.me/556196592066">+55 61 9659-2066</a></p>
     <p>📍 Endereço: Av. Paranoá, Quadra 18, Conjunto 12, Lote 2, Paranoá, DF</p>
-    <p style="text-align: center; font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 1.2em; color: #ff2d55; padding: 10px; background-color: #f8f9fa; border: 1px solid #ff2d55; border-radius: 5px; margin-top: 20px;">
+    <p style="text-align: center; font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 1.2em; color: #ff0000; padding: 10px; background-color: #f8f9fa; border: 1px solid #ff0000; border-radius: 5px; margin-top: 20px;">
       Visite nossa loja e descubra atendimento de qualidade e promoções incríveis em uma ampla variedade de produtos para você e toda sua família.
     </p>
   </div>
