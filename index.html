@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -25,6 +24,9 @@
     body {
       background-color: #f8f9fa;
       color: #2d3436;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
 
     header {
@@ -109,6 +111,7 @@
       padding: 40px 20px;
       max-width: 1300px;
       margin: 0 auto;
+      flex: 1 0 auto;
     }
 
     .section.active {
@@ -327,8 +330,8 @@
       color: #fff;
       text-align: center;
       padding: 20px;
-      margin-top: 40px;
       font-size: 0.9em;
+      flex-shrink: 0;
     }
 
     @media (max-width: 768px) {
@@ -409,384 +412,82 @@
     <a href="#" onclick="showSection('contato')">Contato</a>
   </nav>
 
-  <div id="perfumaria" class="section">
-    <h2>Perfumaria</h2>
-    <div class="products-grid">
-    <div class="product-card">
-  <img src="imagens/nutrimaxi_double_oil_1l.jpg" alt="Nutrimaxi Double Oil 1L">
-  <p>Nutrimaxi Double Oil 1L</p>
-  <p><strong>R$ 34,99</strong></p>
-  <button class="add-to-cart" onclick="addToCart('Nutrimaxi Double Oil 1L', 34.99)">Adicionar ao Carrinho</button>
-</div>
-      <div class="product-card">
-  <img src="imagens/shampoo_nutry_cap_jaborandi_alecrim.jpg" alt="Shampoo Nutry Cap Jaborandi com Alecrim">
-  <p>Shampoo Nutry Cap Jaborandi com Alecrim</p>
-  <p><strong>R$ 25,99</strong></p>
-  <button class="add-to-cart" onclick="addToCart('Shampoo Nutry Cap Jaborandi com Alecrim', 25.99)">Adicionar ao Carrinho</button>
-</div>
-      <div class="product-card">
-  <img src="imagens/shampoo_nutry_cap_mamona.jpg" alt="Shampoo Nutry Cap Mamona">
-  <p>Shampoo Nutry Cap Mamona</p>
-  <p><strong>R$ 25,99</strong></p>
-  <button class="add-to-cart" onclick="addToCart('Shampoo Nutry Cap Mamona', 25.99)">Adicionar ao Carrinho</button>
-</div>
-      <div class="product-card">
-  <img src="imagens/sos_forca_shampoo_fortalecedor_nutry_cap_1l.jpg" alt="S.O.S Força Shampoo Fortalecedor Nutry Cap 1 Litro">
-  <p>S.O.S Força Shampoo Fortalecedor Nutry Cap 1 Litro</p>
-  <p><strong>R$ 35,99</strong></p>
-  <button class="add-to-cart" onclick="addToCart('S.O.S Força Shampoo Fortalecedor Nutry Cap 1 Litro', 35.99)">Adicionar ao Carrinho</button>
-</div>
-      
-     <div class="product-card">
-  <img src="imagens/cresce_plus_oleo_ricino_babosa.jpg" alt="Cresce + Óleo de Rícino e Babosa">
-  <p>Cresce + Óleo de Rícino e Babosa</p>
-  <p><strong>R$ 35,99</strong></p>
-  <button class="add-to-cart" onclick="addToCart('Cresce + Óleo de Rícino e Babosa', 35.99)">Adicionar ao Carrinho</button>
-</div>
-      <div class="product-card">
-        <img src="imagens/sabonete_intimo.jpg" alt="Sabonete Íntimo">
-        <p>Sabonete Íntimo</p>
-        <p><strong>R$ 9,99</strong></p>
-        <button class="add-to-cart" onclick="addToCart('Sabonete Íntimo', 9.99)">Adicionar ao Carrinho</button>
-      </div>
-      <div class="product-card">
-        <img src="imagens/toalha_guri_baby_soft.jpg" alt="Toalha Umedecida Guri Baby Soft">
-        <p>Toalha Umedecida Guri Baby Soft</p>
-        <p><strong>R$ 9,99</strong></p>
-        <button class="add-to-cart" onclick="addToCart('Toalha Umedecida Guri Baby Soft', 9.99)">Adicionar ao Carrinho</button>
-      </div>
-      <div class="product-card">
-  <img src="imagens/papel_higienico_comfy_folha_dupla_12rolos.jpg" alt="Papel Higiênico Comfy Folha Dupla 12 Rolos">
-  <p>Papel Higiênico Comfy Folha Dupla 12 Rolos</p>
-  <p><strong>R$ 9,99</strong></p>
-  <button class="add-to-cart" onclick="addToCart('Papel Higiênico Comfy Folha Dupla 12 Rolos', 9.99)">Adicionar ao Carrinho</button>
+  <main>
+    <div id="perfumaria" class="section">
+      <h2>Perfumaria</h2>
+      <div class="products-grid">
+        <div class="product-card">
+          <img src="imagens/nutrimaxi_double_oil_1l.jpg" alt="Nutrimaxi Double Oil 1L">
+          <p>Nutrimaxi Double Oil 1L</p>
+          <p><strong>R$ 34,99</strong></p>
+          <button class="add-to-cart" onclick="addToCart('Nutrimaxi Double Oil 1L', 34.99)">Adicionar ao Carrinho</button>
         </div>
-    </div>
-  </div>
-
-  <div id="medicamentos" class="section">
-    <h2>Medicamentos Isentos de Prescrição</h2>
-    <div class="products-grid">
-      <div class="product-card">
-        <img src="imagens/simeticona_75mgml.jpg" alt="Simeticona 75mg/ml Sabor Laranja">
-        <p>Simeticona 75mg/ml Sabor Laranja</p>
-        <p><strong>R$ 6,99</strong></p>
-        <button class="add-to-cart" onclick="addToCart('Simeticona 75mg/ml Sabor Laranja', 6.99)">Adicionar ao Carrinho</button>
-      </div>
-      <div class="product-card">
-        <img src="imagens/resfegripe_20capsulas.jpg" alt="ResfeGripe 20 Cápsulas">
-        <p>ResfeGripe 20 Cápsulas</p>
-        <p><strong>R$ 9,99</strong></p>
-        <button class="add-to-cart" onclick="addToCart('ResfeGripe 20 Cápsulas', 9.99)">Adicionar ao Carrinho</button>
-      </div>
-      <div class="product-card">
-        <img src="imagens/xarope_expec_120ml.jpg" alt="Xarope Expec 120ml">
-        <p>Xarope Expec 120ml</p>
-        <p><strong>R$ 29,99</strong></p>
-        <button class="add-to-cart" onclick="addToCart('Xarope Expec 120ml', 29.99)">Adicionar ao Carrinho</button>
-      </div>
-      <div class="product-card">
-        <img src="imagens/lorasaliv_10mg_2cx.jpg" alt="Lorasaliv 10 mg 2 Caixas">
-        <p>Lorasaliv 10 mg 2 Caixas por R$ 9,99</p>
-        <p><strong>R$ 9,99</strong></p>
-        <button class="add-to-cart" onclick="addToCart('Lorasaliv 10 mg 2 Caixas', 9.99)">Adicionar ao Carrinho</button>
-      </div>
-      <div class="product-card">
-        <img src="imagens/descon_xarope_120ml.jpg" alt="Descon Xarope 120ml">
-        <p>Descon Xarope 120ml</p>
-        <p><strong>R$ 29,99</strong></p>
-        <button class="add-to-cart" onclick="addToCart('Descon Xarope 120ml', 29.99)">Adicionar ao Carrinho</button>
-      </div>
-      <div class="product-card">
-        <img src="imagens/teste_verifik.jpg" alt="Teste Verifik 99,9% Precisão">
-        <p>Teste Verifik 99,9% Precisão</p>
-        <p><strong>R$ 9,99</strong></p>
-        <button class="add-to-cart" onclick="addToCart('Teste Verifik 99,9% Precisão', 9.99)">Adicionar ao Carrinho</button>
-      </div>
-      <div class="product-card">
-        <img src="imagens/colirio_teuto_20ml.jpg" alt="Colírio Teuto 20ml">
-        <p>Colírio Teuto 20ml</p>
-        <p><strong>R$ 14,99</strong></p>
-        <button class="add-to-cart" onclick="addToCart('Colírio Teuto 20ml', 14.99)">Adicionar ao Carrinho</button>
-      </div>
-      <div class="product-card">
-        <img src="imagens/narix_3unidades.jpg" alt="Narix 3 Unidades">
-        <p>Narix 3 Unidades</p>
-        <p><strong>R$ 9,99</strong></p>
-        <button class="add-to-cart" onclick="addToCart('Narix 3 Unidades', 9.99)">Adicionar ao Carrinho</button>
+        <div class="product-card">
+          <img src="imagens/shampoo_nutry_cap_jaborandi_alecrim.jpg" alt="Shampoo Nutry Cap Jaborandi com Alecrim">
+          <p>Shampoo Nutry Cap Jaborandi com Alecrim</p>
+          <p><strong>R$ 25,99</strong></p>
+          <button class="add-to-cart" onclick="addToCart('Shampoo Nutry Cap Jaborandi com Alecrim', 25.99)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="product-card">
+          <img src="imagens/shampoo_nutry_cap_mamona.jpg" alt="Shampoo Nutry Cap Mamona">
+          <p>Shampoo Nutry Cap Mamona</p>
+          <p><strong>R$ 25,99</strong></p>
+          <button class="add-to-cart" onclick="addToCart('Shampoo Nutry Cap Mamona', 25.99)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="product-card">
+          <img src="imagens/sos_forca_shampoo_fortalecedor_nutry_cap_1l.jpg" alt="S.O.S Força Shampoo Fortalecedor Nutry Cap 1 Litro">
+          <p>S.O.S Força Shampoo Fortalecedor Nutry Cap 1 Litro</p>
+          <p><strong>R$ 35,99</strong></p>
+          <button class="add-to-cart" onclick="addToCart('S.O.S Força Shampoo Fortalecedor Nutry Cap 1 Litro', 35.99)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="product-card">
+          <img src="imagens/cresce_plus_oleo_ricino_babosa.jpg" alt="Cresce + Óleo de Rícino e Babosa">
+          <p>Cresce + Óleo de Rícino e Babosa</p>
+          <p><strong>R$ 35,99</strong></p>
+          <button class="add-to-cart" onclick="addToCart('Cresce + Óleo de Rícino e Babosa', 35.99)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="product-card">
+          <img src="imagens/sabonete_intimo.jpg" alt="Sabonete Íntimo">
+          <p>Sabonete Íntimo</p>
+          <p><strong>R$ 9,99</strong></p>
+          <button class="add-to-cart" onclick="addToCart('Sabonete Íntimo', 9.99)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="product-card">
+          <img src="imagens/toalha_guri_baby_soft.jpg" alt="Toalha Umedecida Guri Baby Soft">
+          <p>Toalha Umedecida Guri Baby Soft</p>
+          <p><strong>R$ 9,99</strong></p>
+          <button class="add-to-cart" onclick="addToCart('Toalha Umedecida Guri Baby Soft', 9.99)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="product-card">
+          <img src="imagens/papel_higienico_comfy_folha_dupla_12rolos.jpg" alt="Papel Higiênico Comfy Folha Dupla 12 Rolos">
+          <p>Papel Higiênico Comfy Folha Dupla 12 Rolos</p>
+          <p><strong>R$ 9,99</strong></p>
+          <button class="add-to-cart" onclick="addToCart('Papel Higiênico Comfy Folha Dupla 12 Rolos', 9.99)">Adicionar ao Carrinho</button>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div id="higiene" class="section">
-    <h2>Higiene Pessoal</h2>
-    <div class="products-grid">
-      <div class="product-card">
-        <img src="imagens/colgate_180g.jpg" alt="Colgate Triple Action 180g">
-        <p>Colgate Triple Action 180g</p>
-        <p><strong>R$ 13,99</strong></p>
-        <button class="add-to-cart" onclick="addToCart('Colgate Triple Action 180g', 13.99)">Adicionar ao Carrinho</button>
-      </div>
-      <div class="product-card">
-        <img src="imagens/gilete_mach3_2unidades.jpg" alt="Gillette Mach 3 2 Unidades">
-        <p>Gillette Mach 3 2 Unidades</p>
-        <p><strong>R$ 15,99</strong></p>
-        <button class="add-to-cart" onclick="addToCart('Gillette Mach 3 2 Unidades', 15.99)">Adicionar ao Carrinho</button>
-      </div>
-      <div class="product-card">
-        <img src="imagens/above_desodorante_pes_150ml.jpg" alt="Above Desodorante para os Pés 150ml">
-        <p>Above Desodorante para os Pés 150ml</p>
-        <p><strong>R$ 18,99</strong></p>
-        <button class="add-to-cart" onclick="addToCart('Above Desodorante para os Pés 150ml', 18.99)">Adicionar ao Carrinho</button>
-      </div>
-      <div class="product-card">
-        <img src="imagens/desodorante_nivea_men_original_protect.jpg" alt="Desodorante Nivea Men Original Protect">
-        <p>Desodorante Nivea Men Original Protect</p>
-        <p><strong>R$ 11,99</strong></p>
-        <button class="add-to-cart" onclick="addToCart('Desodorante Nivea Men Original Protect', 11.99)">Adicionar ao Carrinho</button>
-      </div>
-      <div class="product-card">
-        <img src="imagens/sabonete_gipsy_80g.jpg" alt="Sabonete Gipsy 80g">
-        <p>Sabonete Gipsy 80g</p>
-        <p><strong>R$ 1,49</strong></p>
-        <button class="add-to-cart" onclick="addToCart('Sabonete Gipsy 80g', 1.49)">Adicionar ao Carrinho</button>
-      </div>
-      <div class="product-card">
-        <img src="imagens/aparelho_prestobarba_gillette_2unidades.jpg" alt="Aparelho Prestobarba Gillette 2 Unidades">
-        <p>Aparelho Prestobarba Gillette 2 Unidades</p>
-        <p><strong>R$ 4,99</strong></p>
-        <button class="add-to-cart" onclick="addToCart('Aparelho Prestobarba Gillette 2 Unidades', 4.99)">Adicionar ao Carrinho</button>
-      </div>
-      <div class="product-card">
-        <img src="imagens/enxaguante_bucal_dentil_limp_500ml.jpg" alt="Enxaguante Bucal Dentil Limp 500ml">
-        <p>Enxaguante Bucal Dentil Limp 500ml</p>
-        <p><strong>R$ 18,99</strong></p>
-        <button class="add-to-cart" onclick="addToCart('Enxaguante Bucal Dentil Limp 500ml', 18.99)">Adicionar ao Carrinho</button>
-      </div>
-      <div class="product-card">
-        <img src="imagens/dermahigi_sabonete_intimo_neutro_2x200ml.jpg" alt="DermaHigi Sabonete Íntimo Diário Neutro 2x200ml">
-        <p>DermaHigi Sabonete Íntimo Diário Neutro 2x200ml</p>
-        <p><strong>R$ 14,99</strong></p>
-        <button class="add-to-cart" onclick="addToCart('DermaHigi Sabonete Íntimo Diário Neutro 2x200ml', 14.99)">Adicionar ao Carrinho</button>
-      </div>
-    </div>
-  </div>
-
-  <div id="infantil" class="section">
-    <h2>Linha Infantil</h2>
-    <div class="products-grid">
-      <div class="product-card">
-        <img src="imagens/salon_line_creme_pentear_kids.jpg" alt="Salon Line Creme de Pentear Kids">
-        <p>Salon Line Creme de Pentear Kids</p>
-        <p><strong>R$ 39,99</strong></p>
-        <button class="add-to-cart" onclick="addToCart('Salon Line Creme de Pentear Kids', 39.99)">Adicionar ao Carrinho</button>
-      </div>
-      <div class="product-card">
-        <img src="imagens/chupeta_fiona.jpg" alt="Chupeta Fiona">
-        <p>Chupeta Fiona</p>
-        <p><strong>R$ 4,99</strong></p>
-        <button class="add-to-cart" onclick="addToCart('Chupeta Fiona', 4.99)">Adicionar ao Carrinho</button>
-      </div>
-      <div class="product-card">
-        <img src="imagens/creme_assadura_huggies_30g.jpg" alt="Creme Assadura Huggies 30g">
-        <p>Creme Assadura Huggies 30g</p>
-        <p><strong>R$ 19,99</strong></p>
-        <button class="add-to-cart" onclick="addToCart('Creme Assadura Huggies 30g', 19.99)">Adicionar ao Carrinho</button>
-      </div>
-      <div class="product-card">
-        <img src="imagens/gel_dental_dentil_kids.jpg" alt="Gel Dental Dentil Kids Bubble Gum 50g">
-        <p>Gel Dental Dentil Kids Bubble Gum 50g</p>
-        <p><strong>R$ 5,99</strong></p>
-        <button class="add-to-cart" onclick="addToCart('Gel Dental Dentil Kids Bubble Gum 50g', 5.99)">Adicionar ao Carrinho</button>
-      </div>
-      <div class="product-card">
-        <img src="imagens/sabonete_pom_pom_kids.jpg" alt="Sabonete Pom Pom Kids">
-        <p>Sabonete Pom Pom Kids</p>
-        <p><strong>R$ 5,99</strong></p>
-        <button class="add-to-cart" onclick="addToCart('Sabonete Pom Pom Kids', 5.99)">Adicionar ao Carrinho</button>
-      </div>
-      <div class="product-card">
-        <img src="imagens/sabonete_liquido_dermacream_baby.jpg" alt="Sabonete Líquido Dermacream Baby">
-        <p>Sabonete Líquido Dermacream Baby</p>
-        <p><strong>R$ 29,99</strong></p>
-        <button class="add-to-cart" onclick="addToCart('Sabonete Líquido Dermacream Baby', 29.99)">Adicionar ao Carrinho</button>
-      </div>
-      <div class="product-card">
-        <img src="imagens/talco_flora_nenem.jpg" alt="Talco Flora Neném 180g">
-        <p>Talco Flora Neném 180g</p>
-        <p><strong>R$ 14,99</strong></p>
-        <button class="add-to-cart" onclick="addToCart('Talco Flora Neném 180g', 14.99)">Adicionar ao Carrinho</button>
-      </div>
-      <div class="product-card">
-        <img src="imagens/salon_line_kit_maracuja.jpg" alt="Salon Line Kit Maracujá Shampoo e Condicionador">
-        <p>Salon Line Kit Maracujá Shampoo e Condicionador</p>
-        <p><strong>R$ 34,99</strong></p>
-        <button class="add-to-cart" onclick="addToCart('Salon Line Kit Maracujá Shampoo e Condicionador', 34.99)">Adicionar ao Carrinho</button>
-      </div>
-    </div>
-  </div>
-
-  <div id="vitaminas" class="section">
-    <h2>Vitaminas</h2>
-    <div class="products-grid">
-     <div class="product-card">
-  <img src="imagens/fortgerin_baritrico_60caps.jpg" alt="Fortgerin Bariátrico 60 Cápsulas">
-  <p>Fortgerin Bariátrico 60 Cápsulas</p>
-  <p><strong>R$ 99,99</strong></p>
-  <button class="add-to-cart" onclick="addToCart('Fortgerin Bariátrico 60 Cápsulas', 99.99)">Adicionar ao Carrinho</button>
-</div>
-      <div class="product-card">
-        <img src="imagens/axis_az_immune_system_feminino.jpg" alt="Axis AZ Immune System Feminino 60 Cápsulas">
-        <p>Axis AZ Immune System Feminino 60 Cápsulas</p>
-        <p><strong>R$ 44,99</strong></p>
-        <button class="add-to-cart" onclick="addToCart('Axis AZ Immune System Feminino 60 Cápsulas', 44.99)">Adicionar ao Carrinho</button>
-      </div>
-     
-      <div class="product-card">
-        <img src="imagens/centropulus_visao_60capsulas.jpg" alt="Centropulus Visão 60 Cápsulas">
-        <p>Centropulus Visão 60 Cápsulas</p>
-        <p><strong>R$ 48,99</strong></p>
-        <button class="add-to-cart" onclick="addToCart('Centropulus Visão 60 Cápsulas', 48.99)">Adicionar ao Carrinho</button>
-      </div>
-      <div class="product-card">
-        <img src="imagens/lipo_axiz.jpg" alt="Lipo AXIZ">
-        <p>Lipo AXIZ</p>
-        <p><strong>R$ 99,99</strong></p>
-        <button class="add-to-cart" onclick="addToCart('Lipo AXIZ', 99.99)">Adicionar ao Carrinho</button>
-      </div>
-      <div class="product-card">
-        <img src="imagens/centropulus_immunity_60comprimidos.jpg" alt="Centropulus Immunity 60 Comprimidos">
-        <p>Centropulus Immunity 60 Comprimidos</p>
-        <p><strong>R$ 49,99</strong></p>
-        <button class="add-to-cart" onclick="addToCart('Centropulus Immunity 60 Comprimidos', 49.99)">Adicionar ao Carrinho</button>
-      </div>
-      <div class="product-card">
-        <img src="imagens/prevent_c_zinco_30comprimidos.jpg" alt="Prevent C + Zinco 30 Comprimidos Sabor Laranja">
-        <p>Prevent C + Zinco 30 Comprimidos Sabor Laranja</p>
-        <p><strong>R$ 24,99</strong></p>
-        <button class="add-to-cart" onclick="addToCart('Prevent C + Zinco 30 Comprimidos Sabor Laranja', 24.99)">Adicionar ao Carrinho</button>
-      </div>
-     <div class="product-card">
-  <img src="imagens/tezus_estimulante_60decus.jpg" alt="Tezus Estimulante com 60 Decus">
-  <p>Tezus Estimulante com 60 Decus</p>
-  <p><strong>R$ 74,99</strong></p>
-  <button class="add-to-cart" onclick="addToCart('Tezus Estimulante com 60 Decus', 74.99)">Adicionar ao Carrinho</button>
-</div>
-
-  <div id="contato" class="section">
-    <h2>Contato</h2>
-    <p>📱 WhatsApp: <a href="https://wa.me/556196592066">+55 61 9659-2066</a></p>
-    <p>📍 Endereço: Av. Paranoá, Quadra 18, Conjunto 12, Lote 2, Paranoá, DF</p>
-    <p style="text-align: center; font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 1.2em; color: #ff0000; padding: 10px; background-color: #f8f9fa; border: 1px solid #ff0000; border-radius: 5px; margin-top: 20px;">
-      Visite nossa loja e descubra atendimento de qualidade e promoções incríveis em uma ampla variedade de produtos para você e toda sua família.
-    </p>
-  </div>
-
-  <footer>
-    <p>© 2025 Atacadão Farma Centro - Todos os direitos reservados.</p>
-  </footer>
-
-  <div id="cart-icon">
-    🛒
-    <span id="cart-count">0</span>
-  </div>
-  <div id="cart-modal">
-    <div id="cart-items"></div>
-    <select id="payment-method">
-      <option value="dinheiro">Dinheiro</option>
-      <option value="cartao">Cartão</option>
-      <option value="pix">Pix</option>
-    </select>
-    <button id="checkout-btn" onclick="sendToWhatsApp()">Finalizar Pedido</button>
-  </div>
-
-  <script>
-    let cart = [];
-
-    function showSection(sectionId) {
-      document.querySelectorAll('.section').forEach(section => {
-        section.classList.remove('active');
-      });
-      document.getElementById(sectionId).classList.add('active');
-    }
-    showSection('perfumaria');
-
-    function addToCart(productName, price) {
-      cart.push({ name: productName, price: price });
-      alert(`${productName} adicionado ao carrinho!`);
-      updateCartCount();
-      updateCartDisplay();
-    }
-
-    function removeFromCart(index) {
-      cart.splice(index, 1);
-      updateCartCount();
-      updateCartDisplay();
-    }
-
-    function toggleCart() {
-      const modal = document.getElementById('cart-modal');
-      modal.classList.toggle('active');
-      updateCartDisplay();
-    }
-
-    function updateCartCount() {
-      const cartCount = document.getElementById('cart-count');
-      cartCount.textContent = cart.length;
-    }
-
-    function updateCartDisplay() {
-      const cartItems = document.getElementById('cart-items');
-      cartItems.innerHTML = '';
-      if (cart.length === 0) {
-        cartItems.innerHTML = '<p>Carrinho vazio.</p>';
-        return;
-      }
-      cart.forEach((item, index) => {
-        const div = document.createElement('div');
-        div.className = 'cart-item';
-        div.innerHTML = `
-          <span>${item.name} - R$ ${item.price.toFixed(2)}</span>
-          <button class="remove-from-cart" onclick="removeFromCart(${index})">Remover</button>
-        `;
-        cartItems.appendChild(div);
-      });
-    }
-
-    function sendToWhatsApp() {
-      if (cart.length === 0) {
-        alert('Seu carrinho está vazio! Adicione produtos antes de finalizar.');
-        return;
-      }
-      const paymentMethod = document.getElementById('payment-method').value;
-      let total = cart.reduce((sum, item) => sum + item.price, 0);
-      let message = `Olá! Quero fazer um pedido:\n\nItens no carrinho:\n${cart.map(item => `${item.name} - R$ ${item.price.toFixed(2)}`).join('\n')}\n\nTotal: R$ ${total.toFixed(2)}\nForma de pagamento: ${paymentMethod}\nPor favor, confirme!`;
-      const whatsappUrl = `https://wa.me/556196592066?text=${encodeURIComponent(message)}`;
-      window.open(whatsappUrl, '_blank');
-      cart = [];
-      updateCartCount();
-      document.getElementById('cart-modal').classList.remove('active');
-    }
-
-    // Novo evento para fechar o modal ao clicar fora
-    document.addEventListener('click', function(event) {
-      const modal = document.getElementById('cart-modal');
-      const cartIcon = document.getElementById('cart-icon');
-      if (modal.classList.contains('active') && !cartIcon.contains(event.target) && !modal.contains(event.target)) {
-        modal.classList.remove('active');
-      }
-    });
-
-    // Ativa o carrinho ao clicar no ícone
-    document.getElementById('cart-icon').addEventListener('click', toggleCart);
-  </script>
-</body>
-</html>
-
-
-
-
-
-
-
-
+    <div id="medicamentos" class="section">
+      <h2>Medicamentos Isentos de Prescrição</h2>
+      <div class="products-grid">
+        <div class="product-card">
+          <img src="imagens/simeticona_75mgml.jpg" alt="Simeticona 75mg/ml Sabor Laranja">
+          <p>Simeticona 75mg/ml Sabor Laranja</p>
+          <p><strong>R$ 6,99</strong></p>
+          <button class="add-to-cart" onclick="addToCart('Simeticona 75mg/ml Sabor Laranja', 6.99)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="product-card">
+          <img src="imagens/resfegripe_20capsulas.jpg" alt="ResfeGripe 20 Cápsulas">
+          <p>ResfeGripe 20 Cápsulas</p>
+          <p><strong>R$ 9,99</strong></p>
+          <button class="add-to-cart" onclick="addToCart('ResfeGripe 20 Cápsulas', 9.99)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="product-card">
+          <img src="imagens/xarope_expec_120ml.jpg" alt="Xarope Expec 120ml">
+          <p>Xarope Expec 120ml</p>
+          <p><strong>R$ 29,99</strong></p>
+          <button class="add-to-cart" onclick="addToCart('Xarope Expec 120ml', 29.99)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="product-card">
+          <img src="imagens/lorasaliv_10mg_2cx.jpg" alt="Lorasaliv 10 mg 2 Caixas">
+          <p>L
